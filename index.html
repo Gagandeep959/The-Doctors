@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Web Notepad</title>
+    </head>
+<body>
+    <textarea id="myNotepad" placeholder="Start typing..."></textarea>
+    
+    <script>
+        // JavaScript for saving/loading
+        const textarea = document.getElementById('myNotepad');
+        const storageKey = 'notepadContent';
+
+        // Load saved text on page load
+        textarea.value = localStorage.getItem(storageKey) || '';
+
+        // Save text whenever the user types
+        textarea.addEventListener('input', () => {
+            localStorage.setItem(storageKey, textarea.value);
+        });
+    </script>
+</body>
+</html>
