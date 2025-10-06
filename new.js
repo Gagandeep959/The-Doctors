@@ -1,4 +1,9 @@
 // pages/index.js
+/**@type{import('next').NextConfig} */
+const nextConfig={
+    output: "export",
+};
+MediaSourceHandle.Exports =nextConfig;
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -33,4 +38,3 @@ export default function HomePage() {
     </>
   );
 }
-
